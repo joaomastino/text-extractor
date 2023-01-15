@@ -4,7 +4,7 @@ numpy==1.23.4
 pandas==1.5.1
 Pillow==9.2.0
 PyPDF2==3.0.1
-pytesseract==0.3.10
+pytesseract==0.3.8
 regex==2022.10.31
 spacy==3.4.4
 spacy-legacy==3.0.11
