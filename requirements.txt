@@ -1,0 +1,13 @@
+en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.4.1/en_core_web_md-3.4.1-py3-none-any.whl
+it-core-news-lg @ https://github.com/explosion/spacy-models/releases/download/it_core_news_lg-3.4.0/it_core_news_lg-3.4.0-py3-none-any.whl
+numpy==1.23.4
+pandas==1.5.1
+Pillow==9.2.0
+PyPDF2==3.0.1
+pytesseract==0.3.10
+regex==2022.10.31
+spacy==3.4.4
+spacy-legacy==3.0.11
+spacy-loggers==1.0.4
+streamlit==1.14.0
+
