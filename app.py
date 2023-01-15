@@ -30,11 +30,6 @@ def extract_text(file, lang):
     file_name = file.name
     if file_name.endswith("pdf"):
         text = convert_pdf_to_txt(file)
-    elif file_name.endswith(("jpg", "jpeg", "png")):
-        # st.write("OCR non ancora disponibile ma ci stiamo lavorando")
-        # sys.exit()
-        with Image.open(file) as img:
-            text = pytesseract.image_to_string(img, lang=lang)
     else:
         with open(file, 'r') as f:
             text = f.read()
@@ -60,7 +55,7 @@ def process_text(text, nlp):
 def main():
     st.title("Estrattore di testo")
     
-    uploaded_file = st.file_uploader("carica un file pdf (jpg e png non ancora supportati)", type=["txt", "pdf", "jpg", "jpeg", "png"])
+    uploaded_file = st.file_uploader("carica un file pdf", type=["txt", "pdf"])
     lang = st.selectbox("Scegli la lingua", ["it", "en"])
 
     nlp = load_model(lang)
