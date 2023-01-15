@@ -28,13 +28,13 @@ def convert_pdf_to_txt(file):
 
 def extract_text(file, lang):
     file_name = file.name
-    # pytesseract.pytesseract.tesseract_cmd = r'C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\pytesseract'
     if file_name.endswith("pdf"):
         text = convert_pdf_to_txt(file)
     elif file_name.endswith(("jpg", "jpeg", "png")):
         # st.write("OCR non ancora disponibile ma ci stiamo lavorando")
         # sys.exit()
-        text = pytesseract.image_to_string(file, lang=lang)
+        with Image.open(file) as img:
+            text = pytesseract.image_to_string(img, lang=lang)
     else:
         with open(file, 'r') as f:
             text = f.read()
